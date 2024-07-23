@@ -1,1 +1,0 @@
-import{j as r,o as e,qa as o}from "./chunk-LPYPLWVV.js";var s=[{path:"",loadChildren:()=>import("./chunk-JOYLGUTZ.js").then(i=>i.WebsiteRoutingModule)}],d=(()=>{let t=class t{};t.\u0275fac=function(n){return new(n||t)},t.\u0275mod=r({type:t}),t.\u0275inj=e({imports:[o.forChild(s),o]});let i=t;return i})();export{d as FeaturesRoutingModule,s as routes};
