@@ -1,0 +1,47 @@
+<div class="w-full h-full flex-col flex gap-5">
+
+  <div class="relative -z-10 w-full h-1/3 min-h-64 flex justify-around items-end px-4">
+    @for (participant of sortedTopThreeLeaderboard; track participant; let index = $index) {
+      <div class="w-3/12 h-full flex flex-col justify-end items-center">
+        <span class="material-icons-outlined text-3xl">account_circle</span>
+        <span class="font-bold">{{ participant.username }}</span>
+        <span class="text text-gray-500"> {{ participant.points }}</span>
+        <div
+          [class]="{
+          'h-full': index === 0,
+          'h-1/2': index === 1,
+          'h-2/6': index === 2
+          }"
+          class="text-center flex justify-center items-center w-full backdrop-blur bg-sky-900/30 rounded-3xl">
+          {{ index + 1 }}
+        </div>
+      </div>
+    }
+
+  </div>
+
+  <div class="absolute z-10 overflow-scroll h-full w-full">
+    <div class="rounded-2xl p-5 pt-4 mt-[80%] h-5/6 overflow-hidden  backdrop-blur
+    w-full bg-white/60 flex flex-col justify-start items-center gap-4">
+      <div
+        class="w-1/5 border-2 border-gray-500 rounded-2xl "
+      >
+      </div>
+      @for (participant of leaderboard; track participant) {
+        <div class="flex border-b gap-4 border-gray-400/40 pb-3 w-full "
+        >
+          <span class="w-1/12 text-3xl"> {{ participant.position }}</span>
+          <div class=" w-2/12 flex flex-col justify-center">
+            <span class="">{{ participant.player }}</span>
+          </div>
+          <div class="flex justify-end grow gap-2 ">
+            <span class="text-xs flex items-center">{{ participant.points}} </span>
+          </div>
+        </div>
+      }
+
+
+    </div>
+
+  </div>
+</div>

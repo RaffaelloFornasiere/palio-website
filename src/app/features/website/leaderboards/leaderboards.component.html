@@ -1,0 +1,30 @@
+<img
+  class="fixed w-full h-full top-0 left-0 -z-10  object-cover opacity-35"
+  src="../../../../assets/images/dddepth-342.jpg"
+>
+<div class="w-full relative h-full overflow-hidden flex flex-col items-center gap-5">
+  <p class="text-3xl p-2">Classifica</p>
+  <div class="relative flex w-1/2 border border-gray-50 rounded-2xl p-0.5">
+    <div class="w-1/2 duration-300 transition-all text-center h-full rounded-2xl" (click)="tab = 'global'"
+         [class]="{'bg-gray-50/80': tab=='global'}"
+    >
+      Globale
+    </div>
+    <div class="w-1/2 duration-300 transition-all text-center h-full rounded-2xl" (click)="tab = 'games'"
+         [class]="{'bg-gray-50/80': tab=='games'}"
+    >
+      Giochi
+    </div>
+  </div>
+
+  @if (tab == 'global') {
+    <single-leaderboard
+
+      class="w-full h-full"
+      [leaderboard]="scores.global"
+    ></single-leaderboard>
+  } @else {
+
+
+  }
+</div>

@@ -1,0 +1,312 @@
+{
+  "global": [
+    {
+      "player": "Sottocastello",
+      "points": 100
+    },
+    {
+      "player": "Somont",
+      "points": 90
+    },
+    {
+      "player": "Salt",
+      "points": 80
+    },
+    {
+      "player": "Villa",
+      "points": 70
+    },
+    {
+      "player": "Sornico",
+      "points": 60
+    }
+  ],
+  "game-scores": {
+    "Calcetto": [
+      {
+        "player": "Sottocastello",
+        "points": 2
+      },
+      {
+        "player": "Somont",
+        "points": 4
+      },
+      {
+        "player": "Salt",
+        "points": 5
+      },
+      {
+        "player": "Villa",
+        "points": 7
+      },
+      {
+        "player": "Sornico",
+        "points": 10
+      }
+    ],
+    "Pallavolo": [
+      {
+        "player": "Sottocastello",
+        "points": 2
+      },
+      {
+        "player": "Somont",
+        "points": 4
+      },
+      {
+        "player": "Salt",
+        "points": 5
+      },
+      {
+        "player": "Villa",
+        "points": 7
+      },
+      {
+        "player": "Sornico",
+        "points": 10
+      }
+    ],
+    "Cibbè": [
+      {
+        "player": "Sottocastello",
+        "points": 2
+      },
+      {
+        "player": "Somont",
+        "points": 4
+      },
+      {
+        "player": "Salt",
+        "points": 5
+      },
+      {
+        "player": "Villa",
+        "points": 7
+      },
+      {
+        "player": "Sornico",
+        "points": 10
+      }
+    ],
+    "Staffetta": [
+      {
+        "player": "Sottocastello",
+        "points": 2
+      },
+      {
+        "player": "Somont",
+        "points": 4
+      },
+      {
+        "player": "Salt",
+        "points": 5
+      },
+      {
+        "player": "Villa",
+        "points": 7
+      },
+      {
+        "player": "Sornico",
+        "points": 10
+      }
+    ],
+    "Camerieri Maschile": [
+      {
+        "player": "Sottocastello",
+        "points": 2
+      },
+      {
+        "player": "Somont",
+        "points": 4
+      },
+      {
+        "player": "Salt",
+        "points": 5
+      },
+      {
+        "player": "Villa",
+        "points": 7
+      },
+      {
+        "player": "Sornico",
+        "points": 10
+      }
+    ],
+    "Camerieri Femminile": [
+      {
+        "player": "Sottocastello",
+        "points": 2
+      },
+      {
+        "player": "Somont",
+        "points": 4
+      },
+      {
+        "player": "Salt",
+        "points": 5
+      },
+      {
+        "player": "Villa",
+        "points": 7
+      },
+      {
+        "player": "Sornico",
+        "points": 10
+      }
+    ],
+    "Corsa coi Sacchi": [
+      {
+        "player": "Sottocastello",
+        "points": 2
+      },
+      {
+        "player": "Somont",
+        "points": 4
+      },
+      {
+        "player": "Salt",
+        "points": 5
+      },
+      {
+        "player": "Villa",
+        "points": 7
+      },
+      {
+        "player": "Sornico",
+        "points": 10
+      }
+    ],
+    "Strade Mate": [
+      {
+        "player": "Sottocastello",
+        "points": 2
+      },
+      {
+        "player": "Somont",
+        "points": 4
+      },
+      {
+        "player": "Salt",
+        "points": 5
+      },
+      {
+        "player": "Villa",
+        "points": 7
+      },
+      {
+        "player": "Sornico",
+        "points": 10
+      }
+    ],
+    "Briscola": [
+      {
+        "player": "Sottocastello",
+        "points": 2
+      },
+      {
+        "player": "Somont",
+        "points": 4
+      },
+      {
+        "player": "Salt",
+        "points": 5
+      },
+      {
+        "player": "Villa",
+        "points": 7
+      },
+      {
+        "player": "Sornico",
+        "points": 10
+      }
+    ],
+    "Morra": [
+      {
+        "player": "Sottocastello",
+        "points": 2
+      },
+      {
+        "player": "Somont",
+        "points": 4
+      },
+      {
+        "player": "Salt",
+        "points": 5
+      },
+      {
+        "player": "Villa",
+        "points": 7
+      },
+      {
+        "player": "Sornico",
+        "points": 10
+      }
+    ],
+    "Bale Pignote": [
+      {
+        "player": "Sottocastello",
+        "points": 2
+      },
+      {
+        "player": "Somont",
+        "points": 4
+      },
+      {
+        "player": "Salt",
+        "points": 5
+      },
+      {
+        "player": "Villa",
+        "points": 7
+      },
+      {
+        "player": "Sornico",
+        "points": 10
+      }
+    ],
+    "Bale Pignote Junior": [
+      {
+        "player": "Sottocastello",
+        "points": 2
+      },
+      {
+        "player": "Somont",
+        "points": 4
+      },
+      {
+        "player": "Salt",
+        "points": 5
+      },
+      {
+        "player": "Villa",
+        "points": 7
+      },
+      {
+        "player": "Sornico",
+        "points": 10
+      }
+    ],
+    "Scatolone": [
+      {
+        "player": "Sottocastello",
+        "points": 2
+      },
+      {
+        "player": "Somont",
+        "points": 4
+      },
+      {
+        "player": "Salt",
+        "points": 5
+      },
+      {
+        "player": "Villa",
+        "points": 7
+      },
+      {
+        "player": "Sornico",
+        "points": 10
+      }
+    ]
+  }
+}
