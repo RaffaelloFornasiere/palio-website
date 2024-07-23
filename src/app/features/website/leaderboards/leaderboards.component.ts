@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import * as scores from './scores.json';
 
 
-export class Leader
+export class Leaderboard{}
 
 
 @Component({
