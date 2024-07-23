@@ -1,1 +1,0 @@
-import{j as r,o as e,oa as o}from"./chunk-SKIAJ27I.js";var s=[{path:"",loadChildren:()=>import("./chunk-GE5RTJBI.js").then(i=>i.WebsiteRoutingModule)}],d=(()=>{let t=class t{};t.\u0275fac=function(n){return new(n||t)},t.\u0275mod=r({type:t}),t.\u0275inj=e({imports:[o.forChild(s),o]});let i=t;return i})();export{d as FeaturesRoutingModule,s as routes};
