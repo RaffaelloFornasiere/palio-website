@@ -10,17 +10,21 @@ import {NgOptimizedImage} from "@angular/common";
 import {NewsComponent} from "./home/items/news/news.component";
 import {StateComponent} from "./home/items/state/state.component";
 import {LiveGameComponent} from "./home/items/live-game/live-game.component";
-import {SingleLeaderboardComponent} from "./leaderboards/leaderboard/single-leaderboard.component";
+import {
+    DecorateParticipantsPipe,
+    SingleLeaderboardComponent
+} from "./leaderboards/single-leaderboard/single-leaderboard.component";
 
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    WebsiteRoutingModule,
-    NgOptimizedImage,
-  ],
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        WebsiteRoutingModule,
+        NgOptimizedImage,
+        DecorateParticipantsPipe,
+    ],
   providers: [Title, {provide: LOCALE_ID, useValue: 'it'}],
   declarations: [
     LeaderboardsComponent,

@@ -21,7 +21,7 @@
     <single-leaderboard
 
       class="w-full h-full"
-      [leaderboard]="scores.global"
+      [leaderboard]="Leaderboard.fromScores(scores.global)"
     ></single-leaderboard>
   } @else {
 
