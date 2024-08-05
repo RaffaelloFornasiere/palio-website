@@ -2,11 +2,13 @@
   "global": [
     {
       "player": "Salt",
-      "points": 61
+      "points": 61,
+      "jolly": true
     },
     {
       "player": "Sotcjiscjel",
-      "points": 42
+      "points": 42,
+      "jolly": true
     },
     {
       "player": "Vile",

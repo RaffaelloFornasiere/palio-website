@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import * as scores from './scores.json';
+import * as scores from '../../../../assets/data/scores.json';
 import {Leaderboard} from "./leaderboard";
 
 

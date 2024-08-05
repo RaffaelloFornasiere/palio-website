@@ -4,8 +4,8 @@ export class Leaderboard{
     return new Leaderboard(scores);
   }
 
-  participants:{player: string, points: number}[];
-  constructor(participants: {player: string, points: number}[]){
+  participants:{player: string, points: number; jolly?:boolean}[];
+  constructor(participants: {player: string, points: number, jolly: boolean}[]){
     this.participants = participants;
   }
   getTopThree(){
