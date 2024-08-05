@@ -479,7 +479,7 @@ var _LeaderboardsComponent = class _LeaderboardsComponent {
 _LeaderboardsComponent.\u0275fac = function LeaderboardsComponent_Factory(t) {
   return new (t || _LeaderboardsComponent)();
 };
-_LeaderboardsComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _LeaderboardsComponent, selectors: [["app-leaderboard"]], decls: 13, vars: 1, consts: [[1, "bg-gray-700", "-z-10", "fixed", "inset-0", "w-full", "h-full"], [1, "flex", "w-full", "h-full", "shrink-0", "items-center", "justify-center"], [1, "relative", "md:max-h-[800px]", "md:max-w-[390px]", "w-full", "h-full"], [1, "max-md:hidden", "absolute", "rounded-l", "bg-black", "w-1.5", "h-20", "-left-1.5", "top-36"], [1, "max-md:hidden", "absolute", "rounded-l", "bg-black", "w-1.5", "h-20", "-left-1.5", "top-60"], [1, "max-md:hidden", "absolute", "rounded-r", "bg-black", "w-1.5", "h-28", "-right-1.5", "top-44"], [1, "relative", "md:pt-5", "bg-white", "md:border-[9px]", "md:border-black", "md:rounded-[50px]", "overflow-hidden", "w-full", "h-full"], ["src", "../../../../assets/images/Sfondo.png", 1, "absolute", "w-full", "h-full", "-top-10", "left-0", "object-cover", "opacity-55"], [1, "w-full", "relative", "h-full", "overflow-hidden", "flex", "flex-col", "items-center", "gap-5"], [1, "text-3xl", "font-bold", "p-2"], ["class", "w-full h-full", 3, "leaderboard"], [1, "w-full", "h-full", 3, "leaderboard"]], template: function LeaderboardsComponent_Template(rf, ctx) {
+_LeaderboardsComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _LeaderboardsComponent, selectors: [["app-leaderboard"]], decls: 13, vars: 1, consts: [[1, "bg-gray-700", "-z-10", "fixed", "inset-0", "w-full", "h-full"], [1, "flex", "w-full", "h-full", "shrink-0", "items-center", "justify-center"], [1, "relative", "md:max-h-[800px]", "md:max-w-[390px]", "w-full", "h-full"], [1, "max-md:hidden", "absolute", "rounded-l", "bg-black", "w-1.5", "h-20", "-left-1.5", "top-36"], [1, "max-md:hidden", "absolute", "rounded-l", "bg-black", "w-1.5", "h-20", "-left-1.5", "top-60"], [1, "max-md:hidden", "absolute", "rounded-r", "bg-black", "w-1.5", "h-28", "-right-1.5", "top-44"], [1, "relative", "md:pt-5", "bg-white", "md:border-[9px]", "md:border-black", "md:rounded-[50px]", "overflow-hidden", "w-full", "h-full"], ["src", "assets/images/Sfondo.png", 1, "absolute", "w-full", "h-full", "-top-10", "left-0", "object-cover", "opacity-55"], [1, "w-full", "relative", "h-full", "overflow-hidden", "flex", "flex-col", "items-center", "gap-5"], [1, "text-3xl", "font-bold", "p-2"], ["class", "w-full h-full", 3, "leaderboard"], [1, "w-full", "h-full", 3, "leaderboard"]], template: function LeaderboardsComponent_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275element(0, "div", 0);
     \u0275\u0275elementStart(1, "div", 1)(2, "div", 2);
@@ -536,4 +536,4 @@ export {
   WebsiteRoutingModule,
   routes
 };
-//# sourceMappingURL=chunk-VWG7G2DQ.js.map
+//# sourceMappingURL=chunk-YNWKAPMX.js.map
