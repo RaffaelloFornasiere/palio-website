@@ -34,38 +34,12 @@ import {
 var scores_exports = {};
 __export(scores_exports, {
   default: () => scores_default,
+  "game-scores": () => game_scores,
   global: () => global
 });
-var global = [
-  {
-    player: "Salt",
-    points: 71,
-    jolly: true
-  },
-  {
-    player: "Sotcjiscjel",
-    points: 47,
-    jolly: true
-  },
-  {
-    player: "Vile",
-    points: 34,
-    jolly: false
-  },
-  {
-    player: "Somont",
-    points: 38,
-    jolly: false
-  },
-  {
-    player: "Surnins",
-    points: 33,
-    jolly: false
-  }
-];
-var scores_default = {
-  global
-};
+var global = [{ player: "Salt", points: 61, jolly: true }, { player: "Sotcjiscjel", points: 42, jolly: true }, { player: "Vile", points: 33 }, { player: "Somont", points: 31 }, { player: "Surnins", points: 30 }];
+var game_scores = { Calcetto: [{ player: "Sottocastello", points: 2 }, { player: "Somont", points: 4 }, { player: "Salt", points: 5 }, { player: "Villa", points: 7 }, { player: "Sornico", points: 10 }], Pallavolo: [{ player: "Sottocastello", points: 2 }, { player: "Somont", points: 4 }, { player: "Salt", points: 5 }, { player: "Villa", points: 7 }, { player: "Sornico", points: 10 }], Cibb\u00E8: [{ player: "Sottocastello", points: 2 }, { player: "Somont", points: 4 }, { player: "Salt", points: 5 }, { player: "Villa", points: 7 }, { player: "Sornico", points: 10 }], Staffetta: [{ player: "Sottocastello", points: 2 }, { player: "Somont", points: 4 }, { player: "Salt", points: 5 }, { player: "Villa", points: 7 }, { player: "Sornico", points: 10 }], "Camerieri Maschile": [{ player: "Sottocastello", points: 2 }, { player: "Somont", points: 4 }, { player: "Salt", points: 5 }, { player: "Villa", points: 7 }, { player: "Sornico", points: 10 }], "Camerieri Femminile": [{ player: "Sottocastello", points: 2 }, { player: "Somont", points: 4 }, { player: "Salt", points: 5 }, { player: "Villa", points: 7 }, { player: "Sornico", points: 10 }], "Corsa coi Sacchi": [{ player: "Sottocastello", points: 2 }, { player: "Somont", points: 4 }, { player: "Salt", points: 5 }, { player: "Villa", points: 7 }, { player: "Sornico", points: 10 }], "Strade Mate": [{ player: "Sottocastello", points: 2 }, { player: "Somont", points: 4 }, { player: "Salt", points: 5 }, { player: "Villa", points: 7 }, { player: "Sornico", points: 10 }], Briscola: [{ player: "Sottocastello", points: 2 }, { player: "Somont", points: 4 }, { player: "Salt", points: 5 }, { player: "Villa", points: 7 }, { player: "Sornico", points: 10 }], Morra: [{ player: "Sottocastello", points: 2 }, { player: "Somont", points: 4 }, { player: "Salt", points: 5 }, { player: "Villa", points: 7 }, { player: "Sornico", points: 10 }], "Bale Pignote": [{ player: "Sottocastello", points: 2 }, { player: "Somont", points: 4 }, { player: "Salt", points: 5 }, { player: "Villa", points: 7 }, { player: "Sornico", points: 10 }], "Bale Pignote Junior": [{ player: "Sottocastello", points: 2 }, { player: "Somont", points: 4 }, { player: "Salt", points: 5 }, { player: "Villa", points: 7 }, { player: "Sornico", points: 10 }], Scatolone: [{ player: "Sottocastello", points: 2 }, { player: "Somont", points: 4 }, { player: "Salt", points: 5 }, { player: "Villa", points: 7 }, { player: "Sornico", points: 10 }] };
+var scores_default = { global, "game-scores": game_scores };
 
 // src/app/features/website/leaderboards/leaderboard.ts
 var Leaderboard = class _Leaderboard {
@@ -275,4 +249,4 @@ export {
   WebsiteRoutingModule,
   routes
 };
-//# sourceMappingURL=chunk-ZWRNVRKN.js.map
+//# sourceMappingURL=chunk-M4BHRHUF.js.map
