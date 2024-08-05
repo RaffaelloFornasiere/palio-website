@@ -12977,7 +12977,7 @@ _AppRoutingModule.\u0275inj = /* @__PURE__ */ \u0275\u0275defineInjector({ impor
     data: {
       navbar: "none"
     },
-    loadChildren: () => import("./chunk-EDM4GQUY.js").then((m) => m.FeaturesRoutingModule)
+    loadChildren: () => import("./chunk-Q7DZBHNX.js").then((m) => m.FeaturesRoutingModule)
   }
 ]), RouterModule] });
 var AppRoutingModule = _AppRoutingModule;
@@ -13062,4 +13062,4 @@ platformBrowser().bootstrapModule(AppModule, { preserveWhitespaces: true }).then
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-4V5SZXTR.js.map
+//# sourceMappingURL=chunk-OXTVPZNB.js.map
