@@ -8,20 +8,24 @@ import {LeaderboardsComponent} from "./leaderboards/leaderboards.component";
 export const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    data: {
+      sidenav: 'none',
+    },
+
+    component: LeaderboardsComponent,
   },
-  {
-    path: 'games',
-    component: GamesComponent
-  },
-  {
-    path: 'leaderboard',
-    component: LeaderboardsComponent
-  },
-  {
-    'path': 'calendar',
-    component: CalendarComponent
-  }
+  // {
+  //   path: 'games',
+  //   component: GamesComponent
+  // },
+  // {
+  //   path: 'leaderboard',
+  //   component: LeaderboardsComponent
+  // },
+  // {
+  //   'path': 'calendar',
+  //   component: CalendarComponent
+  // }
 ];
 
 

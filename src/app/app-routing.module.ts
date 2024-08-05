@@ -6,14 +6,14 @@ import {LoginComponent} from "./login/login/login.component";
 @NgModule({
   imports: [
     RouterModule.forRoot([
-      {
-        path: 'login',
-        data: {
-          navbar: 'none',
-          sidenav: 'none',
-        },
-        component: LoginComponent,
-      },
+      // {
+      //   path: 'login',
+      //   data: {
+      //     navbar: 'none',
+      //     sidenav: 'none',
+      //   },
+      //   component: LoginComponent,
+      // },
       {
         path: '',
         data: {

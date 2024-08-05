@@ -1,24 +1,24 @@
 {
   "global": [
     {
-      "player": "Sottocastello",
-      "points": 100
+      "player": "Salt",
+      "points": 61
+    },
+    {
+      "player": "Sotcjiscjel",
+      "points": 42
+    },
+    {
+      "player": "Vile",
+      "points": 33
     },
     {
       "player": "Somont",
-      "points": 90
+      "points": 31
     },
     {
-      "player": "Salt",
-      "points": 80
-    },
-    {
-      "player": "Villa",
-      "points": 70
-    },
-    {
-      "player": "Sornico",
-      "points": 60
+      "player": "Surnins",
+      "points": 30
     }
   ],
   "game-scores": {

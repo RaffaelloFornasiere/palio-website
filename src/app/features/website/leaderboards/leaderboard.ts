@@ -8,13 +8,13 @@ export class Leaderboard{
   constructor(participants: {player: string, points: number}[]){
     this.participants = participants;
   }
-  get topThree(){
+  getTopThree(){
     return this.participants
       .sort((a, b) => b.points - a.points)
       .slice(0, 3);
   }
 
-  get winner(){
+  getWinner(){
     return this.participants
       .sort((a, b) => b.points - a.points)[0];
   }

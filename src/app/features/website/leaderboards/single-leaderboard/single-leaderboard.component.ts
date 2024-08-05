@@ -1,6 +1,5 @@
-import {Component, Input, input, Pipe} from '@angular/core';
+import {Component, Input, OnInit, Pipe} from '@angular/core';
 import {Leaderboard} from "../leaderboard";
-import {pipe} from "rxjs";
 
 
 @Pipe(
@@ -27,8 +26,13 @@ export class DecorateParticipantsPipe{
   templateUrl: './single-leaderboard.component.html',
   styleUrl: './single-leaderboard.component.scss'
 })
-export class SingleLeaderboardComponent {
+export class SingleLeaderboardComponent implements OnInit{
+  ngOnInit(): void {
+    console.log("Leaderboard", this.leaderboard)
+  }
   @Input() leaderboard!:Leaderboard
+
+
 
 
 
