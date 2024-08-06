@@ -448,13 +448,14 @@ var colors2 = {
 };
 var _LeaderboardsComponent = class _LeaderboardsComponent {
   constructor() {
-    this.selectedLeaderboard = null;
+    this.selectedLeaderboard = Leaderboard.fromScores(global);
     this.games = Object.keys(this.gameScores);
     this.tab = "global";
     this.scores = scores_exports;
     this.Leaderboard = Leaderboard;
     this.colors = colors2;
   }
+  // selectedLeaderboard:Leaderboard|null = null
   ngOnInit() {
     for (let game of this.games) {
     }
@@ -539,4 +540,4 @@ export {
   WebsiteRoutingModule,
   routes
 };
-//# sourceMappingURL=chunk-E27QNUXT.js.map
+//# sourceMappingURL=chunk-4ZGRAT6Q.js.map
