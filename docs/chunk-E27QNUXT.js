@@ -14,15 +14,20 @@ import {
   ɵɵelement,
   ɵɵelementEnd,
   ɵɵelementStart,
+  ɵɵgetCurrentView,
+  ɵɵlistener,
   ɵɵnextContext,
   ɵɵpipe,
   ɵɵpipeBind1,
   ɵɵproperty,
   ɵɵpureFunction1,
   ɵɵpureFunction3,
+  ɵɵreference,
   ɵɵrepeater,
   ɵɵrepeaterCreate,
   ɵɵrepeaterTrackByIdentity,
+  ɵɵresetView,
+  ɵɵrestoreView,
   ɵɵstyleMap,
   ɵɵtemplate,
   ɵɵtext,
@@ -37,9 +42,192 @@ __export(scores_exports, {
   "game-scores": () => game_scores,
   global: () => global
 });
-var global = [{ player: "Salt", points: 61, jolly: true }, { player: "Sotcjiscjel", points: 42, jolly: true }, { player: "Vile", points: 33 }, { player: "Somont", points: 31 }, { player: "Surnins", points: 30 }];
-var game_scores = { Calcetto: [{ player: "Sottocastello", points: 2 }, { player: "Somont", points: 4 }, { player: "Salt", points: 5 }, { player: "Villa", points: 7 }, { player: "Sornico", points: 10 }], Pallavolo: [{ player: "Sottocastello", points: 2 }, { player: "Somont", points: 4 }, { player: "Salt", points: 5 }, { player: "Villa", points: 7 }, { player: "Sornico", points: 10 }], Cibb\u00E8: [{ player: "Sottocastello", points: 2 }, { player: "Somont", points: 4 }, { player: "Salt", points: 5 }, { player: "Villa", points: 7 }, { player: "Sornico", points: 10 }], Staffetta: [{ player: "Sottocastello", points: 2 }, { player: "Somont", points: 4 }, { player: "Salt", points: 5 }, { player: "Villa", points: 7 }, { player: "Sornico", points: 10 }], "Camerieri Maschile": [{ player: "Sottocastello", points: 2 }, { player: "Somont", points: 4 }, { player: "Salt", points: 5 }, { player: "Villa", points: 7 }, { player: "Sornico", points: 10 }], "Camerieri Femminile": [{ player: "Sottocastello", points: 2 }, { player: "Somont", points: 4 }, { player: "Salt", points: 5 }, { player: "Villa", points: 7 }, { player: "Sornico", points: 10 }], "Corsa coi Sacchi": [{ player: "Sottocastello", points: 2 }, { player: "Somont", points: 4 }, { player: "Salt", points: 5 }, { player: "Villa", points: 7 }, { player: "Sornico", points: 10 }], "Strade Mate": [{ player: "Sottocastello", points: 2 }, { player: "Somont", points: 4 }, { player: "Salt", points: 5 }, { player: "Villa", points: 7 }, { player: "Sornico", points: 10 }], Briscola: [{ player: "Sottocastello", points: 2 }, { player: "Somont", points: 4 }, { player: "Salt", points: 5 }, { player: "Villa", points: 7 }, { player: "Sornico", points: 10 }], Morra: [{ player: "Sottocastello", points: 2 }, { player: "Somont", points: 4 }, { player: "Salt", points: 5 }, { player: "Villa", points: 7 }, { player: "Sornico", points: 10 }], "Bale Pignote": [{ player: "Sottocastello", points: 2 }, { player: "Somont", points: 4 }, { player: "Salt", points: 5 }, { player: "Villa", points: 7 }, { player: "Sornico", points: 10 }], "Bale Pignote Junior": [{ player: "Sottocastello", points: 2 }, { player: "Somont", points: 4 }, { player: "Salt", points: 5 }, { player: "Villa", points: 7 }, { player: "Sornico", points: 10 }], Scatolone: [{ player: "Sottocastello", points: 2 }, { player: "Somont", points: 4 }, { player: "Salt", points: 5 }, { player: "Villa", points: 7 }, { player: "Sornico", points: 10 }] };
-var scores_default = { global, "game-scores": game_scores };
+var global = [
+  {
+    player: "Salt",
+    points: 61,
+    jolly: true
+  },
+  {
+    player: "Sotcjiscjel",
+    points: 42,
+    jolly: true
+  },
+  {
+    player: "Vile",
+    points: 33
+  },
+  {
+    player: "Somont",
+    points: 31
+  },
+  {
+    player: "Surnins",
+    points: 30
+  }
+];
+var game_scores = {
+  "Taglio del Ceppo Maschile": [
+    {
+      player: "Sotcjiscjel",
+      points: 5
+    },
+    {
+      player: "Somont",
+      points: 7
+    },
+    {
+      player: "Salt",
+      points: 10,
+      jolly: true
+    },
+    {
+      player: "Vile",
+      points: 3
+    },
+    {
+      player: "Surnins",
+      points: 1
+    }
+  ],
+  "Taglio del Ceppo Femminile": [
+    {
+      player: "Sotcjiscjel",
+      points: 5,
+      jolly: true
+    },
+    {
+      player: "Somont",
+      points: 7
+    },
+    {
+      player: "Salt",
+      points: 10
+    },
+    {
+      player: "Vile",
+      points: 3
+    },
+    {
+      player: "Surnins",
+      points: 1
+    }
+  ],
+  "Corsa coi Sacchi": [
+    {
+      player: "Surnins",
+      points: 10
+    },
+    {
+      player: "Salt",
+      points: 7
+    },
+    {
+      player: "Sotcjiscjel",
+      points: 5
+    },
+    {
+      player: "Vile",
+      points: 3
+    },
+    {
+      player: "Somont",
+      points: 1
+    }
+  ],
+  "Strade Mate": [
+    {
+      player: "Vile",
+      points: 10
+    },
+    {
+      player: "Salt",
+      points: 7
+    },
+    {
+      player: "Surnins",
+      points: 5
+    },
+    {
+      player: "Somont",
+      points: 3
+    },
+    {
+      player: "Sotcjiscjel",
+      points: 1
+    }
+  ],
+  Staffetta: [
+    {
+      player: "Sotcjiscjel",
+      points: 10
+    },
+    {
+      player: "Surnins",
+      points: 7
+    },
+    {
+      player: "Salt",
+      points: 5
+    },
+    {
+      player: "Vile",
+      points: 3
+    },
+    {
+      player: "Somont",
+      points: 1
+    }
+  ],
+  Cibb\u00E8: [
+    {
+      player: "Vile",
+      points: 10
+    },
+    {
+      player: "Salt",
+      points: 7
+    },
+    {
+      player: "Somont",
+      points: 5
+    },
+    {
+      player: "Surnins",
+      points: 3
+    },
+    {
+      player: "Sotcjiscjel",
+      points: 1
+    }
+  ],
+  Bocce: [
+    {
+      player: "Sotcjiscjel",
+      points: 10
+    },
+    {
+      player: "Somont",
+      points: 7
+    },
+    {
+      player: "Salt",
+      points: 5
+    },
+    {
+      player: "Surnins",
+      points: 3
+    },
+    {
+      player: "Vile",
+      points: 1
+    }
+  ]
+};
+var scores_default = {
+  global,
+  "game-scores": game_scores
+};
 
 // src/app/features/website/leaderboards/leaderboard.ts
 var Leaderboard = class _Leaderboard {
@@ -54,6 +242,9 @@ var Leaderboard = class _Leaderboard {
   }
   getWinner() {
     return this.participants.sort((a, b) => b.points - a.points)[0];
+  }
+  getSortedParticipants() {
+    return this.participants.sort((a, b) => b.points);
   }
 };
 
@@ -169,30 +360,113 @@ var SingleLeaderboardComponent = _SingleLeaderboardComponent;
 })();
 
 // src/app/features/website/leaderboards/leaderboards.component.ts
-function LeaderboardsComponent_Conditional_11_Template(rf, ctx) {
+function LeaderboardsComponent_Conditional_16_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275element(0, "single-leaderboard", 11);
+    \u0275\u0275element(0, "single-leaderboard", 13);
   }
   if (rf & 2) {
     const ctx_r0 = \u0275\u0275nextContext();
-    \u0275\u0275property("leaderboard", ctx_r0.Leaderboard.fromScores(ctx_r0.scores.global));
+    \u0275\u0275property("leaderboard", ctx_r0.selectedLeaderboard);
   }
 }
-function LeaderboardsComponent_Conditional_12_Template(rf, ctx) {
+function LeaderboardsComponent_Conditional_17_For_2_Conditional_4_For_2_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "div", 20)(1, "span");
+    \u0275\u0275text(2);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(3, "span");
+    \u0275\u0275text(4);
+    \u0275\u0275elementEnd()();
+  }
+  if (rf & 2) {
+    const participant_r11 = ctx.$implicit;
+    const index_r12 = ctx.$index;
+    \u0275\u0275advance(2);
+    \u0275\u0275textInterpolate1("", index_r12 + 1, "\xB0");
+    \u0275\u0275advance(2);
+    \u0275\u0275textInterpolate(participant_r11.player);
+  }
 }
+function LeaderboardsComponent_Conditional_17_For_2_Conditional_4_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "div", 19);
+    \u0275\u0275repeaterCreate(1, LeaderboardsComponent_Conditional_17_For_2_Conditional_4_For_2_Template, 5, 2, "div", 21, \u0275\u0275repeaterTrackByIdentity);
+    \u0275\u0275elementEnd();
+  }
+  if (rf & 2) {
+    const game_r3 = \u0275\u0275nextContext().$implicit;
+    const ctx_r9 = \u0275\u0275nextContext(2);
+    \u0275\u0275advance();
+    \u0275\u0275repeater(ctx_r9.Leaderboard.fromScores(ctx_r9.gameScores[game_r3]).getSortedParticipants());
+  }
+}
+var _c02 = (a0) => ({ "background-image": a0 });
+function LeaderboardsComponent_Conditional_17_For_2_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r18 = \u0275\u0275getCurrentView();
+    \u0275\u0275elementStart(0, "div", 15);
+    \u0275\u0275listener("click", function LeaderboardsComponent_Conditional_17_For_2_Template_div_click_0_listener() {
+      \u0275\u0275restoreView(_r18);
+      const _r8 = \u0275\u0275reference(2);
+      return \u0275\u0275resetView(_r8.checked = !_r8.checked);
+    });
+    \u0275\u0275element(1, "input", 16, 17);
+    \u0275\u0275text(3);
+    \u0275\u0275template(4, LeaderboardsComponent_Conditional_17_For_2_Conditional_4_Template, 3, 0, "div", 18);
+    \u0275\u0275elementEnd();
+  }
+  if (rf & 2) {
+    const game_r3 = ctx.$implicit;
+    const _r8 = \u0275\u0275reference(2);
+    const ctx_r2 = \u0275\u0275nextContext(2);
+    \u0275\u0275styleMap(\u0275\u0275pureFunction1(4, _c02, "linear-gradient(to right, " + ctx_r2.colors[ctx_r2.Leaderboard.fromScores(ctx_r2.gameScores[game_r3]).getWinner().player] + ", transparent 95%"));
+    \u0275\u0275advance(3);
+    \u0275\u0275textInterpolate1(" ", game_r3, " ");
+    \u0275\u0275advance();
+    \u0275\u0275conditional(4, _r8.checked ? 4 : -1);
+  }
+}
+function LeaderboardsComponent_Conditional_17_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "div", 14);
+    \u0275\u0275repeaterCreate(1, LeaderboardsComponent_Conditional_17_For_2_Template, 5, 6, "div", 22, \u0275\u0275repeaterTrackByIdentity);
+    \u0275\u0275elementEnd();
+  }
+  if (rf & 2) {
+    const ctx_r1 = \u0275\u0275nextContext();
+    \u0275\u0275advance();
+    \u0275\u0275repeater(ctx_r1.games);
+  }
+}
+var _c12 = (a0) => ({ "bg-gray-50/80": a0 });
+var colors2 = {
+  "Salt": "rgba(0,60,255,0.50)",
+  "Sotcjiscjel": "rgba(255,221,0,0.50)",
+  "Vile": "rgba(0,0,0,0.50)",
+  "Somont": "rgba(37,195,0,0.50)",
+  "Surnins": "rgba(255,0,0,0.50)"
+};
 var _LeaderboardsComponent = class _LeaderboardsComponent {
   constructor() {
+    this.selectedLeaderboard = null;
+    this.games = Object.keys(this.gameScores);
     this.tab = "global";
     this.scores = scores_exports;
     this.Leaderboard = Leaderboard;
+    this.colors = colors2;
   }
   ngOnInit() {
+    for (let game of this.games) {
+    }
+  }
+  get gameScores() {
+    return game_scores;
   }
 };
 _LeaderboardsComponent.\u0275fac = function LeaderboardsComponent_Factory(t) {
   return new (t || _LeaderboardsComponent)();
 };
-_LeaderboardsComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _LeaderboardsComponent, selectors: [["app-leaderboard"]], decls: 13, vars: 1, consts: [[1, "bg-gray-700", "-z-10", "fixed", "inset-0", "w-full", "h-full"], [1, "flex", "w-full", "h-full", "shrink-0", "items-center", "justify-center"], [1, "relative", "md:max-h-[800px]", "md:max-w-[390px]", "w-full", "h-full"], [1, "max-md:hidden", "absolute", "rounded-l", "bg-black", "w-1.5", "h-20", "-left-1.5", "top-36"], [1, "max-md:hidden", "absolute", "rounded-l", "bg-black", "w-1.5", "h-20", "-left-1.5", "top-60"], [1, "max-md:hidden", "absolute", "rounded-r", "bg-black", "w-1.5", "h-28", "-right-1.5", "top-44"], [1, "relative", "md:pt-5", "bg-white", "md:border-[9px]", "md:border-black", "md:rounded-[50px]", "overflow-hidden", "w-full", "h-full"], ["src", "assets/images/Sfondo.jpg", 1, "absolute", "w-full", "h-full", "-top-10", "left-0", "object-cover", "opacity-55"], [1, "w-full", "relative", "h-full", "overflow-hidden", "flex", "flex-col", "items-center", "gap-5"], [1, "text-3xl", "font-bold", "p-2"], ["class", "w-full h-full", 3, "leaderboard"], [1, "w-full", "h-full", 3, "leaderboard"]], template: function LeaderboardsComponent_Template(rf, ctx) {
+_LeaderboardsComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _LeaderboardsComponent, selectors: [["app-leaderboard"]], decls: 18, vars: 9, consts: [[1, "bg-gray-700", "-z-10", "fixed", "inset-0", "w-full", "h-full"], [1, "flex", "w-full", "h-full", "shrink-0", "items-center", "justify-center"], [1, "relative", "md:max-h-[800px]", "md:max-w-[390px]", "w-full", "h-full"], [1, "max-md:hidden", "absolute", "rounded-l", "bg-black", "w-1.5", "h-20", "-left-1.5", "top-36"], [1, "max-md:hidden", "absolute", "rounded-l", "bg-black", "w-1.5", "h-20", "-left-1.5", "top-60"], [1, "max-md:hidden", "absolute", "rounded-r", "bg-black", "w-1.5", "h-28", "-right-1.5", "top-44"], [1, "relative", "md:pt-5", "bg-white", "md:border-[9px]", "md:border-black", "md:rounded-[50px]", "overflow-hidden", "w-full", "h-full"], ["src", "assets/images/Sfondo.jpg", 1, "absolute", "w-full", "h-full", "top-0", "left-0", "object-cover", "opacity-55"], [1, "w-full", "relative", "h-full", "overflow-hidden", "flex", "flex-col", "items-center", "gap-5"], [1, "text-3xl", "font-bold", "p-2"], [1, "relative", "flex", "w-1/2", "border", "border-gray-50", "rounded-2xl", "p-0.5"], [1, "w-1/2", "duration-300", "transition-all", "text-center", "h-full", "rounded-2xl", 3, "click"], ["class", "w-full h-full", 3, "leaderboard"], [1, "w-full", "h-full", 3, "leaderboard"], [1, "flex-col", "flex", "gap-1", "w-full", "overflow-scroll"], [1, "w-full", "rounded-2xl", "p-5", 3, "click"], ["type", "checkbox", 1, "hidden"], ["checkbox", ""], ["class", "flex justify-between w-full"], [1, "flex", "justify-between", "w-full"], [1, "flex", "flex-col", "items-center", "justify-center"], ["class", "flex flex-col items-center justify-center"], ["class", " w-full rounded-2xl p-5", 3, "style"]], template: function LeaderboardsComponent_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275element(0, "div", 0);
     \u0275\u0275elementStart(1, "div", 1)(2, "div", 2);
@@ -200,14 +474,30 @@ _LeaderboardsComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({
     \u0275\u0275elementStart(6, "div", 6);
     \u0275\u0275element(7, "img", 7);
     \u0275\u0275elementStart(8, "div", 8)(9, "p", 9);
-    \u0275\u0275text(10, "Classifica Generale");
+    \u0275\u0275text(10, "CLASSIFICA");
     \u0275\u0275elementEnd();
-    \u0275\u0275template(11, LeaderboardsComponent_Conditional_11_Template, 1, 1, "single-leaderboard", 10)(12, LeaderboardsComponent_Conditional_12_Template, 0, 0);
+    \u0275\u0275elementStart(11, "div", 10)(12, "div", 11);
+    \u0275\u0275listener("click", function LeaderboardsComponent_Template_div_click_12_listener() {
+      return ctx.selectedLeaderboard = ctx.Leaderboard.fromScores(ctx.scores["global"]);
+    });
+    \u0275\u0275text(13, " Globale ");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(14, "div", 11);
+    \u0275\u0275listener("click", function LeaderboardsComponent_Template_div_click_14_listener() {
+      return ctx.selectedLeaderboard = null;
+    });
+    \u0275\u0275text(15, " Giochi ");
+    \u0275\u0275elementEnd()();
+    \u0275\u0275template(16, LeaderboardsComponent_Conditional_16_Template, 1, 1, "single-leaderboard", 12)(17, LeaderboardsComponent_Conditional_17_Template, 3, 0);
     \u0275\u0275elementEnd()()()();
   }
   if (rf & 2) {
-    \u0275\u0275advance(11);
-    \u0275\u0275conditional(11, ctx.tab == "global" ? 11 : 12);
+    \u0275\u0275advance(12);
+    \u0275\u0275classMap(\u0275\u0275pureFunction1(5, _c12, ctx.selectedLeaderboard));
+    \u0275\u0275advance(2);
+    \u0275\u0275classMap(\u0275\u0275pureFunction1(7, _c12, !ctx.selectedLeaderboard));
+    \u0275\u0275advance(2);
+    \u0275\u0275conditional(16, ctx.selectedLeaderboard ? 16 : 17);
   }
 }, dependencies: [SingleLeaderboardComponent], styles: ["\n\n/*# sourceMappingURL=leaderboards.component.css.map */"] });
 var LeaderboardsComponent = _LeaderboardsComponent;
@@ -249,4 +539,4 @@ export {
   WebsiteRoutingModule,
   routes
 };
-//# sourceMappingURL=chunk-M4BHRHUF.js.map
+//# sourceMappingURL=chunk-E27QNUXT.js.map
