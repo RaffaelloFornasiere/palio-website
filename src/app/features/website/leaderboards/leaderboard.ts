@@ -19,5 +19,10 @@ export class Leaderboard{
       .sort((a, b) => b.points - a.points)[0];
   }
 
+  getSortedParticipants(){
+    return this.participants
+      .sort((a, b) => b.points)
+  }
+
 
 }
