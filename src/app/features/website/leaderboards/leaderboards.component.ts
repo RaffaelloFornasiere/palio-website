@@ -20,8 +20,8 @@ let colors:any = {
 })
 export class LeaderboardsComponent implements OnInit{
 
-  // selectedLeaderboard:Leaderboard|null = Leaderboard.fromScores(scores['global']);
-  selectedLeaderboard:Leaderboard|null = null
+  selectedLeaderboard:Leaderboard|null = Leaderboard.fromScores(scores['global']);
+  // selectedLeaderboard:Leaderboard|null = null
   ngOnInit(): void {
     for(let game of this.games){
 
